@@ -1,4 +1,4 @@
-form datetime import datetime, date
+from datetime import datetime, date
 from time import sleep
 import sys, os
 
@@ -25,6 +25,7 @@ def processArgs():
         arg = sys.argv[1]
         print "[DEBUG] <processArgs> Good argument found : " + str(arg)
         return arg
+    
     return None
 
 def clearLine():
@@ -42,7 +43,7 @@ def main():
     # Process arguments
     goalStr = processArgs()
     if(None == goalStr):
-        print "[ERROR] Got no date to countdown to !"
+        print "[ERROR] Got no date to count down to !"
         exit(1)
 
     try:
