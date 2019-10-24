@@ -47,7 +47,7 @@ def main():
         exit(1)
 
     try:
-        goal = datetime.strptime(goalStr, "%Y-%m-%d %H:%M:%S:%f")
+        goal = datetime.strptime(goalStr, "%Y-%m-%d %H:%M:%S.%f")
     except ValueError:
         print "[ERROR] Argument date-time " + goalStr + " is not formated correctly."
         print "        Expected format is YYYY-MM-DD hh:mm:ss.f"
